@@ -397,6 +397,20 @@ margin:200px 0;
 }
 .items:hover .shadow{top:0}
 
+span.pagination{
+  display: block !important;
+  text-align: center !important;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+span.pagination a {
+  background: #e6af4b !important;
+  text-decoration: none !important;
+  padding: 10px 10px !important;
+  margin-right: 16px !important;
+  /* display: inline-block; */
+  /* text-align: center; */
+}
 
 
 
