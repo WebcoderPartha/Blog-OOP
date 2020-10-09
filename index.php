@@ -1,6 +1,3 @@
-<?php include "config/config.php"; ?>
-<?php include "lib/Database.php"; ?>
-<?php include "helpers/Format.php"; ?>
 <?php include "inc/header.php"; ?>
 <?php include "inc/slider.php"; ?>
 <?php
