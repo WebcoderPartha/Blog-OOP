@@ -23,37 +23,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="81ac0f83-be04-4110-9205-79f31ac12a85" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/admin/add_page.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/delpage.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/editcat.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/editpost.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/page.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/upload/1602464800.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/upload/1602465867.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/upload/1602588654.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/upload/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/page.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/addcat.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/addcat.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/addpost.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/addpost.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/catlist.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/catlist.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/copyright.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/copyright.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/inc/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/inc/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/inc/sidebar.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/inc/sidebar.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/postlist.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/postlist.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/social.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/social.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/titleslogan.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/titleslogan.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/upload/post1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/upload/post2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contact.php" beforeDir="false" afterPath="$PROJECT_DIR$/contact_us.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/helpers/Format.php" beforeDir="false" afterPath="$PROJECT_DIR$/helpers/Format.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/footer.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/inc/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/sidebar.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/sidebar.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Database.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Database.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/post.php" beforeDir="false" afterPath="$PROJECT_DIR$/post.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,7 +95,7 @@
       <workItem from="1602578234795" duration="10367000" />
       <workItem from="1602641236859" duration="746000" />
       <workItem from="1602663960174" duration="15000" />
-      <workItem from="1602849598732" duration="2179000" />
+      <workItem from="1602849598732" duration="4279000" />
     </task>
     <servers />
   </component>
@@ -166,10 +139,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="373" y="23" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.824@0.0.1536.824" timestamp="1602587407659" />
-    <state x="425" y="187" key="run.anything.popup" timestamp="1602584933566">
+    <state x="425" y="187" key="run.anything.popup" timestamp="1602853730034">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1602584933566" />
+    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1602853730034" />
     <state x="430" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1602851776116">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

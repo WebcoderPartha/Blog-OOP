@@ -98,18 +98,41 @@
     </div>
 </div>
 <div class="navsection templete">
+    <?php
+        $path = $_SERVER['SCRIPT_FILENAME'];
+        $title = basename($path, '.php');
+    ?>
     <ul>
-        <li><a id="active" href="index.php">Home</a></li>
+        <li><a
+             <?php
+                if ($title == 'index'){
+                    echo 'id="active"';
+                }
+
+            ?> href="index.php">Home</a></li>
         <?php
+
+
             $query = "SELECT * FROM pages ORDER BY id DESC";
             $result = $db->select($query);
             if ($result){
                 foreach ($result as $page){
         ?>
-        <li><a href="page.php?pageid=<?php echo $page['id'] ?>"><?php echo $page['name'] ?></a></li>
+        <li><a
+                <?php
+                if (isset($pageid) && $_GET['pageid'] == $page['id']){
+                    echo 'id="active"';
+                }
+               ?>
+                    href="page.php?pageid=<?php echo $page['id'] ?>"><?php echo $page['name'] ?></a></li>
         <?php } }else{ ?>
                 <li><a id="active" href="">NO Page</li>
         <?php } ?>
-        <li><a href="contact.php">Contact</a></li>
+        <li><a
+            <?php
+            if ($title == 'contact_us'){
+                echo 'id="active"';
+            }
+            ?> href="contact_us.php">Contact</a></li>
     </ul>
 </div>
