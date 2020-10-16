@@ -1,11 +1,35 @@
 <?php include "config/config.php"; ?>
 <?php include "lib/Database.php"; ?>
-<?php include "helpers/Format.php"; ?>
+<?php include "helpers/Format.php";
+    $db = new Database();
+    $fm = new Format();
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Basic Website</title>
+    <?php
+        if (isset($_GET['pageid'])){
+            $pageid = $_GET['pageid'];
+            $query = "SELECT * FROM pages WHERE id = '$pageid'";
+            $pages = $db->select($query);
+
+            if ($pages){
+                $page = mysqli_fetch_assoc($pages);
+            ?>
+                <title><?php echo $page['name'] ?> | <?php echo title; ?></title>
+          <?php  } }elseif(isset($_GET['id'])){
+                $id = $_GET['id'];
+                $query = "SELECT * FROM posts WHERE id = '$id'";
+                $posts = $db->select($query);
+                if ($posts){
+                    $post = mysqli_fetch_assoc($posts); ?>
+                    <title><?php echo $post['title'] ?> | <?php echo title; ?></title>
+                <?php } }else{ ?>
+            <title><?php echo $fm->title(); ?> | <?php echo title; ?></title>
+      <?php  } ?>
+
     <meta name="language" content="English">
     <meta name="description" content="It is a website about education">
     <meta name="keywords" content="blog,cms blog">
@@ -41,19 +65,29 @@
 
 <body>
 <div class="headersection templete clear">
+    <?php
+        $query = "SELECT * FROM slogan WHERE id = '1'";
+        $getData = $db->select($query);
+        $result = mysqli_fetch_assoc($getData);
+    ?>
     <a href="#">
         <div class="logo">
-            <img src="images/logo.png" alt="Logo"/>
-            <h2>Website Title</h2>
-            <p>Our website description</p>
+            <img src="admin/<?php echo $result['logo'] ?>" alt="Logo"/>
+            <h2><?php echo $result['site_title'] ?></h2>
+            <p><?php echo $result['site_desc'] ?></p>
         </div>
     </a>
+    <?php
+        $query = "SELECT * FROM social_media WHERE id= '1' ";
+        $media = $db->select($query);
+        $link = mysqli_fetch_assoc($media);
+    ?>
     <div class="social clear">
         <div class="icon clear">
-            <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
-            <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
-            <a href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
-            <a href="#" target="_blank"><i class="fa fa-google-plus"></i></a>
+            <a href="<?php echo $link['facebook']; ?>" target="_blank"><i class="fa fa-facebook"></i></a>
+            <a href="<?php echo $link['twitter']; ?>" target="_blank"><i class="fa fa-twitter"></i></a>
+            <a href="<?php echo $link['linkedin']; ?>" target="_blank"><i class="fa fa-linkedin"></i></a>
+            <a href="<?php echo $link['gplus']; ?>" target="_blank"><i class="fa fa-google-plus"></i></a>
         </div>
         <div class="searchbtn clear">
             <form action="search.php" method="post">
@@ -66,7 +100,16 @@
 <div class="navsection templete">
     <ul>
         <li><a id="active" href="index.php">Home</a></li>
-        <li><a href="about.php">About</a></li>
+        <?php
+            $query = "SELECT * FROM pages ORDER BY id DESC";
+            $result = $db->select($query);
+            if ($result){
+                foreach ($result as $page){
+        ?>
+        <li><a href="page.php?pageid=<?php echo $page['id'] ?>"><?php echo $page['name'] ?></a></li>
+        <?php } }else{ ?>
+                <li><a id="active" href="">NO Page</li>
+        <?php } ?>
         <li><a href="contact.php">Contact</a></li>
     </ul>
 </div>

@@ -11,10 +11,17 @@
                     </ul>
                 </li>
 
-                <li><a class="menuitem">Update Pages</a>
+                <li><a class="menuitem">Pages</a>
                     <ul class="submenu">
-                        <li><a>About Us</a></li>
-                        <li><a>Contact Us</a></li>
+                        <li><a href="add_page.php">Add Page</a></li>
+                        <?php
+                            $query = "SELECT * FROM pages ORDER BY id DESC";
+                            $result = $db->select($query);
+                            if ($result){
+                                foreach ($result as $page) {
+                        ?>
+                        <li><a href="page.php?pageid=<?php echo $page['id']; ?>"><?php echo $page['name']; ?></a></li>
+                        <?php } } ?>
                     </ul>
                 </li>
                 <li><a class="menuitem">Category Option</a>

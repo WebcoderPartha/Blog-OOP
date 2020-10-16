@@ -21,7 +21,7 @@
                 <?php if($post) { ?>
 				<h2><?php echo $result['title']; ?></h2>
 				<h4><?php $fm = new Format();  echo $fm->dateFormat($result['date']) ?>, By <?php echo $result['author'] ?></h4>
-				<img src="admin/upload/<?php echo $result['image'] ?>" alt="MyImage"/>
+				<img src="admin/<?php echo $result['image'] ?>" alt="MyImage"/>
 				<?php echo $result['body'] ?>
 
 
@@ -34,7 +34,7 @@
                             while ($rrpost =$reletedPost->fetch_assoc()){
                     ?>
 					<h2>Related articles</h2>
-					<a href="post.php?id=<?php echo $rrpost['id']; ?>"><img src="admin/upload/<?php echo $rrpost['image'] ?>" alt="post image"/></a>
+					<a href="post.php?id=<?php echo $rrpost['id']; ?>"><img src="admin/<?php echo $rrpost['image'] ?>" alt="post image"/></a>
 				</div>
                 <?php } } ?>
                 <?php  }else { header("Location: 404.php"); ?>

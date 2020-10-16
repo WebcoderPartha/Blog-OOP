@@ -1,140 +1,65 @@
 ﻿<?php include "inc/header.php"; ?>
 <?php include "inc/sidebar.php"; ?>
+
+<?php
+if (isset($_GET['del'])){
+    $id = $_GET['del'];
+    $image_query = "SELECT * FROM posts WHERE id = '$id' ";
+    $getimage = $db->select($image_query);
+    $exist_image = mysqli_fetch_assoc($getimage);
+    $has_image = $exist_image['image'];
+    if ($has_image){
+        unlink($has_image);
+    }
+    $query = "DELETE FROM posts WHERE id = '$id'";
+    $delete = $db->delete($query);
+    if ($delete) {
+        echo "<span style='color: green'>Post deleted successfully</span>";
+    } else {
+        echo "<span style='color: red'>Post not delete</span>";
+    }
+
+}
+?>
 <div class="grid_10">
     <div class="box round first grid">
         <h2>Post List</h2>
         <div class="block">
-            <table class="data display datatable" id="example">
+            <table class="table data display datatable">
             <thead>
                 <tr>
                     <th>Post Title</th>
                     <th>Description</th>
                     <th>Category</th>
                     <th>Image</th>
+                    <th>Tags</th>
+                    <th>Author</th>
                     <th>Action</th>
                 </tr>
             </thead>
             <tbody>
+            <?php
+                $query = "select posts.*, categories.name from posts inner join categories on posts.cat = categories.id order by posts.id desc";
+                $posts = $db->select($query);
+                if ($posts){
+                    foreach ($posts as $post){
+            ?>
                 <tr class="odd gradeX">
-                    <td>Trident</td>
-                    <td>Internet Explorer 4.0</td>
-                    <td>Win 95+</td>
-                    <td class="center"> 4</td>
-                    <td><a href="">Edit</a> || <a href="">Delete</a></td>
-                </tr>
-                <tr class="even gradeC">
-                    <td>Trident</td>
-                    <td>Internet Explorer 5.0</td>
-                    <td>Win 95+</td>
-                    <td class="center">5</td>
-                    <td><a href="">Edit</a> || <a href="">Delete</a></td>
-                </tr>
-                <tr class="odd gradeA">
-                    <td>Trident</td>
-                    <td>Internet Explorer 5.5</td>
-                    <td>Win 95+</td>
-                    <td class="center">5.5</td>
-                    <td><a href="">Edit</a> || <a href="">Delete</a></td>
-                </tr>
-                <tr class="even gradeA">
-                    <td>Trident</td>
-                    <td>Internet Explorer 6</td>
-                    <td>Win 98+</td>
-                    <td class="center">6</td>
-                    <td><a href="">Edit</a> || <a href="">Delete</a></td>
-                </tr>
-                <tr class="odd gradeA">
-                    <td>Trident</td>
-                    <td>Internet Explorer 7</td>
-                    <td>Win XP SP2+</td>
-                    <td class="center">7</td>
-                    <td><a href="">Edit</a> || <a href="">Delete</a></td>
-                </tr>
-                <tr class="even gradeA">
-                    <td>Trident</td>
-                    <td>AOL browser (AOL desktop)</td>
-                    <td>Win XP</td>
-                    <td class="center">6</td>
-                    <td><a href="">Edit</a> || <a href="">Delete</a></td>
-                </tr>
-                <tr class="gradeA">
-                    <td>Gecko</td>
-                    <td>Firefox 1.0</td>
-                    <td>Win 98+ / OSX.2+</td>
-                    <td class="center">1.7</td>
-                    <td><a href="">Edit</a> || <a href="">Delete</a></td>
-                </tr>
-                <tr class="gradeA">
-                    <td>Gecko</td>
-                    <td>Firefox 1.5</td>
-                    <td>Win 98+ / OSX.2+</td>
-                    <td class="center">1.8</td>
-                    <td><a href="">Edit</a> || <a href="">Delete</a></td>
-                </tr>
-                <tr class="gradeA">
-                    <td>Gecko</td>
-                    <td>Firefox 2.0</td>
-                    <td>Win 98+ / OSX.2+</td>
-                    <td class="center">1.8</td>
-                    <td><a href="">Edit</a> || <a href="">Delete</a></td>
-                </tr>
-                <tr class="gradeA">
-                    <td>Gecko</td>
-                    <td>Firefox 3.0</td>
-                    <td>Win 2k+ / OSX.3+</td>
-                    <td class="center">1.9</td>
-                    <td><a href="">Edit</a> || <a href="">Delete</a></td>
-                </tr>
-                <tr class="gradeA">
-                    <td>Gecko</td>
-                    <td>Camino 1.0</td>
-                    <td>OSX.2+</td>
-                    <td class="center">1.8</td>
-                    <td><a href="">Edit</a> || <a href="">Delete</a></td>
-                </tr>
+                    <td><?php echo $post['title']; ?></td>
+                    <td><?php echo $fm->textShorten($post['title'], 50) ?></td>
 
-                <tr class="gradeX">
-                    <td>Misc</td>
-                    <td>Dillo 0.8</td>
-                    <td>Embedded devices</td>
-                    <td class="center">-</td>
-                    <td><a href="">Edit</a> || <a href="">Delete</a></td>
+                    <td><?php echo $post['name'] ?></td>
+                    <td><img src="<?php echo $post['image'] ?>" width="60" height="40" alt=""></td>
+                    <td><?php echo $post['tags'] ?></td>
+                    <td><?php echo $post['author'] ?></td>
+
+                    <td><a href="editpost.php?id=<?php echo $post['id'] ?>">Edit</a> || <a onclick="return confirm('Are you sure to delete this post?')" href="?del=<?php echo $post['id'] ?>">Delete</a></td>
                 </tr>
-                <tr class="gradeX">
-                    <td>Misc</td>
-                    <td>Links</td>
-                    <td>Text only</td>
-                    <td class="center">-</td>
-                    <td><a href="">Edit</a> || <a href="">Delete</a></td>
-                </tr>
-                <tr class="gradeX">
-                    <td>Misc</td>
-                    <td>Lynx</td>
-                    <td>Text only</td>
-                    <td class="center">-</td>
-                    <td><a href="">Edit</a> || <a href="">Delete</a></td>
-                </tr>
-                <tr class="gradeC">
-                    <td>Misc</td>
-                    <td>IE Mobile</td>
-                    <td>Windows Mobile 6</td>
-                    <td class="center">-</td>
-                    <td><a href="">Edit</a> || <a href="">Delete</a></td>
-                </tr>
-                <tr class="gradeC">
-                    <td>Misc</td>
-                    <td>PSP browser</td>
-                    <td>PSP</td>
-                    <td class="center">-</td>
-                    <td><a href="">Edit</a> || <a href="">Delete</a></td>
-                </tr>
-                <tr class="gradeU">
-                    <td>Other browsers</td>
-                    <td>All others</td>
-                    <td>-</td>
-                    <td class="center">-</td>
-                    <td><a href="">Edit</a> || <a href="">Delete</a></td>
-                </tr>
+            <?php } }else{ ?>
+                  <h2>No posts found</h2>
+
+               <?php } ?>
+
             </tbody>
         </table>
 
@@ -143,9 +68,7 @@
 </div>
     <script type="text/javascript">
         $(document).ready(function () {
-            setupLeftMenu();
             $('.datatable').dataTable();
-            setSidebarHeight();
         });
     </script>
 <?php include "inc/footer.php"; ?>

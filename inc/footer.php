@@ -7,7 +7,12 @@
             <li><a href="#">Privacy</a></li>
         </ul>
     </div>
-    <p>&copy; Copyright Training with live project.</p>
+    <?php
+        $query = "SELECT * FROM copyright WHERE id = '1' ";
+        $text = $db->select($query);
+        $copyright = mysqli_fetch_assoc($text);
+    ?>
+    <p><?php echo $copyright['copyright_text'] ?></p>
 </div>
 <div class="fixedicon clear">
     <a href="http://www.facebook.com"><img src="images/fb.png" alt="Facebook"/></a>
