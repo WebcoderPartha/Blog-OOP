@@ -35,6 +35,8 @@
                      Session::set("login", true);
                      Session::set("username", $value['username']);
                      Session::set('id', $value['id']);
+                     Session::set('role', $value['role']);
+                     Session::set('name', $value['name']);
                      header('Location: index.php');
                  }else{
                      echo "<span style='color:red;font-size: 18px'>No result found!</span>";
@@ -58,8 +60,11 @@
 			</div>
 		</form><!-- form -->
 		<div class="button">
-			<a href="#">Training with live project</a>
+			<a href="forget-password.php">Forget Password</a>
 		</div><!-- button -->
+        <div class="button">
+            <a href="#">Training with live project</a>
+        </div><!-- button -->
 	</section><!-- content -->
 </div><!-- container -->
 </body>

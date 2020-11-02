@@ -12,11 +12,13 @@
                             $body = $fm->validation($_POST['body']);
                             $tags = $fm->validation($_POST['tags']);
                             $author = $fm->validation($_POST['author']);
+                            $userid = $fm->validation($_POST['userid']);
                             $title = mysqli_real_escape_string($db->link, $title);
                             $cat = mysqli_real_escape_string($db->link, $cat);
                             $body = mysqli_real_escape_string($db->link, $body);
                             $tags = mysqli_real_escape_string($db->link, $tags);
                             $author = mysqli_real_escape_string($db->link, $author);
+                            $userid = mysqli_real_escape_string($db->link, $userid);
 
                             if ($title == '' || $title == '' || $title == '' || $title == '' || $title == ''){
                                 echo "<span style='color: red'>Field must not be empty</span>";
@@ -40,7 +42,7 @@
                             }else{
 
                                 move_uploaded_file($file_tmp, $upload_image);
-                                $query = "INSERT INTO posts(cat, title, body, image, author, tags) VALUES ('$cat', '$title', '$body', '$upload_image', '$author', '$tags')";
+                                $query = "INSERT INTO posts(cat, title, body, image, author, tags, userid) VALUES ('$cat', '$title', '$body', '$upload_image', '$author', '$tags', '$userid')";
                                 $result = $db->insert($query);
 
                                 if ($result){
@@ -112,7 +114,8 @@
                                 <label>Author</label>
                             </td>
                             <td>
-                                <input type="text" name="author" placeholder="Enter author name..." class="medium" />
+                                <input type="text" name="author" value="<?php echo Session::get('name') ?>" placeholder="Enter author name..." class="medium" />
+                                <input type="hidden" value="<?php echo Session::get('id') ?>" name="userid">
                             </td>
                         </tr>
 						<tr>

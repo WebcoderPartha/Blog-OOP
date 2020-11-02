@@ -146,7 +146,7 @@
                                 <label>Author</label>
                             </td>
                             <td>
-                                <input type="text" value="<?php echo $post['author'] ?>" name="author" placeholder="Enter author name..." class="medium" />
+                                <input type="text" value="<?php echo Session::get('name') ?>" name="author" placeholder="Enter author name..." class="medium" />
                             </td>
                         </tr>
 						<tr>

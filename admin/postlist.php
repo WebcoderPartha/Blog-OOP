@@ -53,7 +53,13 @@ if (isset($_GET['del'])){
                     <td><?php echo $post['tags'] ?></td>
                     <td><?php echo $post['author'] ?></td>
 
-                    <td><a href="editpost.php?id=<?php echo $post['id'] ?>">Edit</a> || <a onclick="return confirm('Are you sure to delete this post?')" href="?del=<?php echo $post['id'] ?>">Delete</a></td>
+                    <td>
+                        <a href="viewpost.php?id=<?php echo $post['id']; ?>">View</a>
+                        <?php  if (Session::get('id') == $post['userid'] || Session::get('role') == 0) { ?>
+                        || <a href="editpost.php?id=<?php echo $post['id'] ?>">Edit</a>
+                        || <a onclick="return confirm('Are you sure to delete this post?')" href="?del=<?php echo $post['id'] ?>">Delete</a>
+                        <?php } ?>
+                    </td>
                 </tr>
             <?php } }else{ ?>
                   <h2>No posts found</h2>

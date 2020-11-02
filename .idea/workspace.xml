@@ -24,8 +24,14 @@
   <component name="ChangeListManager">
     <list default="true" id="81ac0f83-be04-4110-9205-79f31ac12a85" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contact.php" beforeDir="false" afterPath="$PROJECT_DIR$/contact_us.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/helpers/Format.php" beforeDir="false" afterPath="$PROJECT_DIR$/helpers/Format.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/addpost.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/addpost.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/editpost.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/editpost.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/inbox.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/inbox.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/inc/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/inc/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/postlist.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/postlist.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contact_us.php" beforeDir="false" afterPath="$PROJECT_DIR$/contact_us.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/inc/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/header.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -35,6 +41,13 @@
   </component>
   <component name="ComposerSettings">
     <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="blade" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -50,7 +63,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/New BD Help" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/Expense_Management" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -58,9 +71,13 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="editing.templates" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampnew\htdocs\blog\admin" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\xampnew\htdocs\blog\admin\upload" />
       <recent name="C:\xampnew\htdocs\blog\admin" />
@@ -95,7 +112,13 @@
       <workItem from="1602578234795" duration="10367000" />
       <workItem from="1602641236859" duration="746000" />
       <workItem from="1602663960174" duration="15000" />
-      <workItem from="1602849598732" duration="4279000" />
+      <workItem from="1602849598732" duration="4937000" />
+      <workItem from="1602908404411" duration="39000" />
+      <workItem from="1603704222670" duration="2655000" />
+      <workItem from="1603777448278" duration="12000" />
+      <workItem from="1604037351419" duration="5375000" />
+      <workItem from="1604160327042" duration="5486000" />
+      <workItem from="1604303911671" duration="15274000" />
     </task>
     <servers />
   </component>
@@ -119,18 +142,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="526" y="236" key="#Notifications/0.0.1536.824@0.0.1536.824" timestamp="1602476612574" />
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1602663973884">
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1602908443647">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1602663973884" />
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1602908443647" />
     <state x="981" y="138" key="NewPhpClassDialog" timestamp="1602227589213">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="981" y="138" key="NewPhpClassDialog/0.0.1536.824@0.0.1536.824" timestamp="1602227589213" />
-    <state x="988" y="339" key="NewPhpFileDialog" timestamp="1602592316868">
+    <state x="988" y="339" key="NewPhpFileDialog" timestamp="1604337482273">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="988" y="339" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1602592316868" />
+    <state x="988" y="339" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1604337482273" />
+    <state x="277" y="57" key="SettingsEditor" timestamp="1604038507748">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="277" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1604038507748" />
     <state width="498" height="446" key="SwitcherDM" timestamp="1602263341738">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -139,13 +166,13 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="373" y="23" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.824@0.0.1536.824" timestamp="1602587407659" />
-    <state x="425" y="187" key="run.anything.popup" timestamp="1602853730034">
+    <state x="425" y="187" width="672" height="677" key="run.anything.popup" timestamp="1604333803778">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1602853730034" />
-    <state x="430" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1602851776116">
+    <state x="425" y="187" width="672" height="677" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1604333803778" />
+    <state x="430" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1604337608292">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="430" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1602851776116" />
+    <state x="430" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1604337608292" />
   </component>
 </project>
