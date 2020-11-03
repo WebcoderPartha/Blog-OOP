@@ -1,10 +1,10 @@
 <?php include 'inc/header.php' ?>
 <?php
-    if (isset($_GET['id']) || isset($_GET['id']) == null ){
-
-        $postId = $_GET['id'];
+    $postid = mysqli_real_escape_string($db->link, $_GET['id']);
+    if (!isset($postid) || $postid == NULL ){
+        echo '<script>window.location = "index.php";</script>';
     }else{
-        header("Location: 404.php");
+        $postId = $postid;
     }
 ?>
 

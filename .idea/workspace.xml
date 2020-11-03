@@ -24,9 +24,9 @@
   <component name="ChangeListManager">
     <list default="true" id="81ac0f83-be04-4110-9205-79f31ac12a85" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/inc/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/inc/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/inc/sidebar.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/inc/sidebar.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/slider.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/slider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/post.php" beforeDir="false" afterPath="$PROJECT_DIR$/post.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/posts.php" beforeDir="false" afterPath="$PROJECT_DIR$/posts.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/search.php" beforeDir="false" afterPath="$PROJECT_DIR$/search.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +57,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/Expense_Management" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../shoutbox" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -65,7 +65,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="editing.templates" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -113,7 +113,7 @@
       <workItem from="1604037351419" duration="5375000" />
       <workItem from="1604160327042" duration="5486000" />
       <workItem from="1604303911671" duration="17529000" />
-      <workItem from="1604385843254" duration="3070000" />
+      <workItem from="1604385843254" duration="6346000" />
     </task>
     <servers />
   </component>
@@ -137,10 +137,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="526" y="236" key="#Notifications/0.0.1536.824@0.0.1536.824" timestamp="1602476612574" />
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1602908443647">
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1604418009957">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1602908443647" />
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1604418009957" />
     <state x="981" y="138" key="NewPhpClassDialog" timestamp="1602227589213">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -149,10 +149,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="988" y="339" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1604388161151" />
-    <state x="277" y="57" key="SettingsEditor" timestamp="1604038507748">
+    <state x="234" y="10" key="SettingsEditor" timestamp="1604400099556">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="277" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1604038507748" />
+    <state x="234" y="10" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1604400099556" />
     <state width="498" height="446" key="SwitcherDM" timestamp="1602263341738">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -165,9 +165,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="425" y="187" width="672" height="677" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1604333803778" />
-    <state x="430" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1604388216325">
+    <state x="430" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1604415174952">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="430" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1604388216325" />
+    <state x="430" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1604415174952" />
   </component>
 </project>

@@ -4,10 +4,11 @@
     $db = new Database();
     $format = new Format();
 
-    if(!isset($_GET['category']) || $_GET['category'] == NULL){
-        header('Location: 404.php');
+    $ID = mysqli_real_escape_string($db->link, $_GET['category']);
+    if(!isset($ID) || $ID == NULL){
+        echo '<script>window.location = "index.php";</script>';
     }else{
-        $id = $_GET['category'];
+        $id = $ID;
     }
 ?>
 
