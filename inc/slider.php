@@ -1,8 +1,17 @@
 <div class="slidersection templete clear">
     <div id="slider">
-        <a href="#"><img src="images/slideshow/01.jpg" alt="nature 1" title="This is slider one Title or Description" /></a>
-        <a href="#"><img src="images/slideshow/02.jpg" alt="nature 2" title="This is slider Two Title or Description" /></a>
-        <a href="#"><img src="images/slideshow/03.jpg" alt="nature 3" title="This is slider three Title or Description" /></a>
-        <a href="#"><img src="images/slideshow/04.jpg" alt="nature 4" title="This is slider four Title or Description" /></a>
+
+        <?php
+            $query = "SELECT * FROM slider ORDER BY id DESC";
+            $sliders = $db->select($query);
+            if ($sliders){
+                foreach ($sliders as $slider){ ?>
+
+                    <a href="<?php echo $slider['link'] ?>"><img src="admin/<?php echo $slider['image'] ?>" alt="nature 1" title="<?php echo $slider['title'] ?>" /></a>
+
+           <?php     }
+            }
+        ?>
+
     </div>
 </div>
